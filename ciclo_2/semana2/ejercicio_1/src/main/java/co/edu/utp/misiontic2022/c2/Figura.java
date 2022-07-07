@@ -4,7 +4,10 @@ public abstract class Figura {
     
     private String color;
 
-    // Constructor define atrubitods como color con un This, haciendo las veces de setter
+    public Figura(){
+    }
+
+    // Constructor define atributos como color con un This, haciendo las veces de setter
     public Figura(String color){
         this.color = color;
     }
@@ -16,4 +19,6 @@ public abstract class Figura {
     public String getColor(){
         return color;
     }
+
+    
 }
