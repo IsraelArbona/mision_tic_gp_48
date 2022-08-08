@@ -3,6 +3,7 @@ package co.edu.utp.misiontic2022.c2.view;
 import java.util.List;
 
 import co.edu.utp.misiontic2022.c2.controller.ReportesController;
+import co.edu.utp.misiontic2022.c2.model.vo.ComprasDeLiderVo;
 import co.edu.utp.misiontic2022.c2.model.vo.DeudasPorProyectoVo;
 import co.edu.utp.misiontic2022.c2.model.vo.ProyectoBancoVo;
 
@@ -70,7 +71,22 @@ public class ReportesView {
     }
 
     public void lideresQueMasGastan() {
-        System.out.println("Falta por desarrollar");
+        System.out.println(repitaCaracter('=', 6) +
+                           " 10 LIDERES MAS COMPRADORES " +
+                           repitaCaracter('=', 7));
+
+        System.out.println(String.format("%-25s %15s", "LIDER", "VALOR  "));
+        System.out.println(repitaCaracter('-', 41));
+
+        try {
+            List<ComprasDeLiderVo> compras = controller.listarLideresQueMasGastan();
+            for (ComprasDeLiderVo compra: compras){
+                System.out.println(compra);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+            e.printStackTrace();
+        }
     }
     
 }

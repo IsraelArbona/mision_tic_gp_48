@@ -10,12 +10,16 @@ public class App
 {
     public static void main( String[] args )
     {
+       /*
        var reportesView = new ReportesView();
        String banco = "Conavi";
        // reportesView.proyectosFinanciadosPorBanco(banco);
 
        var limiteInferior = 50_000d;
        reportesView.totalAdeudadoPorProyectosSuperioresALimite(limiteInferior);
+       */
 
+       var reportesView3 = new ReportesView();
+       reportesView3.lideresQueMasGastan();
     }
 }
